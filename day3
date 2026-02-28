@@ -9,13 +9,13 @@ public class EmployeeService {
 
     private List<Employee> employees = EmployeeRepository.getEmployees();
 
-    // 1. Calculate average salary
+   
     public double calculateAverageSalary() {
         return employees.stream()
                 .collect(Collectors.averagingDouble(Employee::getSalary));
     }
 
-    // 2. Find employee with maximum salary in each department
+    
     public Map<Department, Employee> maxSalaryByDepartment() {
         return employees.stream()
                 .filter(e -> e.getDepartment() != null)
@@ -27,7 +27,7 @@ public class EmployeeService {
                         )));
     }
 
-    // 3. Calculate total salary per department
+   
     public Map<Department, Double> totalSalaryByDepartment() {
         return employees.stream()
                 .filter(e -> e.getDepartment() != null)
@@ -37,7 +37,7 @@ public class EmployeeService {
                 ));
     }
 
-    // 4. Display employee name and salary
+
     public void displayNameAndSalary() {
         employees.stream()
                 .forEach(e ->
@@ -48,7 +48,7 @@ public class EmployeeService {
                         ));
     }
 
-    // 5. Sort by salary in descending order
+ 
     public List<Employee> sortBySalaryDesc() {
         return employees.stream()
                 .sorted(Comparator.comparing(Employee::getSalary).reversed())
