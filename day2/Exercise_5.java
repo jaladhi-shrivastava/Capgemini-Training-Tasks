@@ -1,5 +1,6 @@
 package com.study;
 //Write a method to calculate factorial of a number. Test this method using method reference feature.
+
 @FunctionalInterface
 interface Solvable{
     int findFact(int num);
