@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<context:annotation-config></context:annotation-config>
+    <!--    there are 4 different types of scopes
+1. singleton
+2. prototype
+3. session
+4. request
+-->
+    <!--by default scope of bean is singleton-->
+<!--    <bean id="hello" class="com.cg.bean.HelloWorld" scope="prototype">-->
+<!--    <bean id="hello" class="com.cg.bean.HelloWorld" scope="singleton">-->
+<!--        when obj created IOC will inject the same name attribute of class HELLOWORLD as anni-->
+
+<!--          <property name="name" value="anni"></property>      &lt;!&ndash; setter injection works with the setter method &ndash;&gt;-->
+
+        <!--  <constructor-arg name="name" value="Sakshi"></constructor-arg>  -->   <!-- constructor injection works with the constructor -->
+
+<!--        <property name="language" >-->
+<!--            <list>-->
+<!--                <value>Hindi</value>-->
+<!--                <value>English</value>-->
+<!--                <value>Spanish</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--this is using setter injection-->
+<!--    <bean id="e" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="101"/>-->
+<!--        <property name="name" value="Jaladhi"/>-->
+<!--        <property name="address" ref="add"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="add" class="com.cg.bean.Address">-->
+<!--        <property name="city" value="Noida"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="201310"/>-->
+<!--    </bean>-->
+
+
+
+<!--    this is using constructor injection-->
+<!--    <bean id="e" class="com.cg.bean.Employee">-->
+<!--        <constructor-arg name="empid" value="101"></constructor-arg>-->
+<!--        <constructor-arg name="name" value="Naina"></constructor-arg>-->
+<!--        <constructor-arg name="address" ref="add"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="add" class="com.cg.bean.Address">-->
+<!--        <constructor-arg name="city" value="Rudrapur"></constructor-arg>-->
+<!--        <constructor-arg name="country" value="India"></constructor-arg>-->
+<!--        <constructor-arg name="zip" value="203153"></constructor-arg>-->
+<!--    </bean>-->
+
+
+<!--    this is filled injection-->
+<!--@Autowired-> by default it will be byType but when there is more than one bean for same class then it will change to byName-->
+
+<!--    <bean id="e" class="com.cg.bean.Employee" autowire="byName"> </bean>-->
+
+<!--    <bean id="add" class="com.cg.bean.Address">-->
+<!--        <constructor-arg name="city" value="Rudrapur"></constructor-arg>-->
+<!--        <constructor-arg name="country" value="India"></constructor-arg>-->
+<!--        <constructor-arg name="zip" value="203153"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="address" class="com.cg.bean.Address">-->
+<!--        <constructor-arg name="city" value="Delhi"></constructor-arg>-->
+<!--        <constructor-arg name="country" value="India"></constructor-arg>-->
+<!--        <constructor-arg name="zip" value="403153"></constructor-arg>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="e" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="101"/>-->
+<!--        <property name="name" value="Piyush"/>-->
+<!--        -->
+<!--    </bean>-->
+
+<!--    <bean id="add" class="com.cg.bean.Address">-->
+<!--        <property name="city" value="Delhi"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="201306"/>-->
+<!--    </bean>-->
+<!--    <bean id="add1" class="com.cg.bean.Address">-->
+<!--        <property name="city" value="Gurgaon"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="zip" value="122001"/>-->
+<!--    </bean>-->
+    
+    
+    
+    <context:component-scan base-package="com.cg.bean"></context:component-scan>
+    <context:property-placeholder location="classpath:data.properties"></context:property-placeholder>
+
+
+</beans>

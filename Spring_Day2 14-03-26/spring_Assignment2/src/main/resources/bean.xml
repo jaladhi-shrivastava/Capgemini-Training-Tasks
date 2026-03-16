@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+    <context:annotation-config></context:annotation-config>
+
+    <context:component-scan base-package="com.cg.bean"></context:component-scan>
+    <context:property-placeholder location="classpath:data.properties"></context:property-placeholder>
+
+
+
+    <!--    ====================Task 3=======================-->
+
+<!--    <bean id="e1" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="101"></property>-->
+<!--        <property name="name" value="Pragya"></property>-->
+<!--        <property name="salary" value="80000.0"></property>-->
+<!--        <property name="age" value="22"></property>-->
+<!--    </bean>-->
+
+<!--    <bean id="e2" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="102"></property>-->
+<!--        <property name="name" value="Aniket"></property>-->
+<!--        <property name="salary" value="90000.0"></property>-->
+<!--        <property name="age" value="30"></property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="sbu" class="com.cg.bean.SBU">-->
+<!--        <property name="sbuId" value="PES-BU"></property>-->
+<!--        <property name="sbuName" value="Kiran Rao"></property>-->
+<!--        <property name="sbuHead" value="Product Engineering Services"></property>-->
+<!--        <property name="employees">-->
+<!--            <list>-->
+<!--                <ref bean="e1"></ref>-->
+<!--                <ref bean="e2"></ref>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+    <!--    ====================Task 4=======================-->
+
+<!--    <bean id="sbu" class="com.cg.bean.SBU">-->
+<!--        <constructor-arg value="PES-BU"/>-->
+<!--        <constructor-arg value="Product Engineering Services"/>-->
+<!--        <constructor-arg value="Kiran Rao"/>-->
+<!--    </bean>-->
+
+<!--        <bean id="e1" class="com.cg.bean.Employee">-->
+<!--            <constructor-arg name="empid" value="100"></constructor-arg>-->
+<!--            <constructor-arg name="name" value="Naina"></constructor-arg>-->
+<!--            <constructor-arg name="salary" value="40000.0"></constructor-arg>-->
+<!--            <constructor-arg name="businessUnit" ref="sbu"></constructor-arg>-->
+<!--            <constructor-arg name="age" value="30"></constructor-arg>-->
+<!--        </bean>-->
+
+<!--    <bean id="e2" class="com.cg.bean.Employee">-->
+<!--        <constructor-arg name="empid" value="101"></constructor-arg>-->
+<!--        <constructor-arg name="name" value="Pragya"></constructor-arg>-->
+<!--        <constructor-arg name="salary" value="40000.0"></constructor-arg>-->
+<!--        <constructor-arg name="businessUnit" ref="sbu"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="30"></constructor-arg>-->
+<!--    </bean>-->
+
+
+
+<!--    <bean id="sbu" class="com.cg.bean.SBU">-->
+<!--        <property name="sbuId" value="PES-BU"/>-->
+<!--        <property name="sbuName" value="Product Engineering Services"/>-->
+<!--        <property name="sbuHead" value="Kiran Rao"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="e1" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="100"/>-->
+<!--        <property name="name" value="Naina"/>-->
+<!--        <property name="salary" value="40000.0"/>-->
+<!--        <property name="businessUnit" ref="sbu"/>-->
+<!--        <property name="age" value="30"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="e2" class="com.cg.bean.Employee">-->
+<!--        <property name="empid" value="101"/>-->
+<!--        <property name="name" value="Pragya"/>-->
+<!--        <property name="salary" value="40000.0"/>-->
+<!--        <property name="businessUnit" ref="sbu"/>-->
+<!--        <property name="age" value="30"/>-->
+<!--    </bean>-->
+
+</beans>
+
+
